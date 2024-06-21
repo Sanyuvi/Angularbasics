@@ -1,0 +1,42 @@
+<h3>Reactive Forms</h3>
+<div class="container">
+  <form [formGroup]="contactForm" (submit)="onSubmit()">
+    <div>
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" formControlName="firstName" >
+    </div>
+    <div>
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" formControlName="lastName" >
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" formControlName="email">
+    </div>
+    <div>
+      <label>Gender:</label><br>
+      <input type="radio" id="male" name="gender" formControlName="gender" value="male"  >
+      <label for="male">Male</label><br>
+      <input type="radio" id="female" name="gender" value="female"  >
+      <label for="female">Female</label><br>
+    </div>
+    <div>
+      <label for="married">Married:</label>
+      <input type="checkbox" id="married" name="married" formControlName="married">
+    </div>
+    <div>
+      <label for="country">Country:</label>
+      <select id="country" name="country" formControlName="country" >
+          <option value="" >Select Country</option>
+          <option value="1" >India</option>
+          <option value="2" >USA</option>
+          <option value="3" >AFG</option>
+          <!-- <option [ngValue]="country.id" *ngFor="let country of countryList" >{{country.name}}</option> -->
+          <!-- Options will be dynamically added here -->
+      </select>
+    </div>
+    <div>
+      <button>Submit</button>
+    </div>
+  </form>
+</div>
